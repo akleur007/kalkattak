@@ -1,0 +1,13 @@
+I want to build a portfolio web app with next.js.
+It should a top navigation bar with 3 links: home, projects and about about.
+I want a design for the project page where the user can see a list of projects. Each project should have a preview image, a title, a short description and some categories.
+If possible the project list should be animated, for example, the project cards can be revealed.
+
+---------------------
+
+Can you add a top navigation bar for the app with 3 items: home, projects and about. They should be linked to pages. Create this pages if they do not exist and insert just a title and a dummy text inside them.
+The navigation items should have some fancy mouseover effects, made with framer-motion. Feel free to be creative.
+
+---------------------
+
+A portfolio app to showcase the projects of a team that produce music, fiction and documentary videos as well as live installations

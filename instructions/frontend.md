@@ -1,8 +1,11 @@
 # Project Overview
 
+- Act as a professional senior frontend developer
 - Use this guide to generate the code
 - Application name: kalkattak
-- Purpose: The web app should present the team "kalkattak". It should show an home page, a projects pahe and an about page
+- Purpose:
+  - The web app should present the portfolio of the team "kalkattak".
+  - It should have 3 pages: Home, Projects and About
 
 # Tech stack
 
