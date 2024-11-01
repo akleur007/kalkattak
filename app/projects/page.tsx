@@ -1,6 +1,8 @@
 import { type Metadata } from 'next';
 import Image from 'next/image';
 
+import { PageHeader } from '@/src/components/page-header';
+
 export const metadata: Metadata = {
   title: 'Projects | KALKATTAK',
   description: 'Showcase of our projects and work',
@@ -161,9 +163,7 @@ export default function ProjectsPage() {
   return (
     <section className="mb-12">
       <div className="flex flex-col gap-4 mb-8">
-        <h1 className="text-5xl font-semibold text-center uppercase">
-          Projects
-        </h1>
+        <PageHeader title="Projects" />
         <p className="text-xl text-center">
           This is an extract from some of the projects we have done or
           participated in.

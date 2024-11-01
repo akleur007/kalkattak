@@ -1,5 +1,7 @@
 import { type Metadata } from 'next';
 
+import { PageHeader } from '@/src/components/page-header';
+
 export const metadata: Metadata = {
   title: 'About | KALKATTAK',
   description: 'About us',
@@ -7,14 +9,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="prose prose-stone max-w-none">
-      <h1>About Us</h1>
-      <p>
-        We are KALKATTAK, your friendly video production team. We specialize in
-        creating engaging visual content that tells your story. Lorem ipsum
-        dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua.
-      </p>
-    </div>
+    <section className="mb-12">
+      <div className="flex flex-col gap-4 mb-8">
+        <PageHeader title="About" />
+        <p className="text-xl text-center">
+          This is an extract from some of the projects we have done or
+          participated in.
+        </p>
+      </div>
+    </section>
   );
 }
