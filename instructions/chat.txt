@@ -11,3 +11,85 @@ The navigation items should have some fancy mouseover effects, made with framer-
 ---------------------
 
 A portfolio app to showcase the projects of a team that produce music, fiction and documentary videos as well as live installations
+
+---------------------
+a list of projects. Each project should have a preview image, a title, a short description and some categories. The project cards should be animated and revealed, for example coming from one side of the screen
+
+---------------------
+Generate a list of 20 projects with following properties:
+- id: number
+- title: string
+- description: text (maximum 15 words)
+- categories: list of strings, maximum 2
+- thumbnail: "https://www.tailwindai.dev/placeholder.svg"
+
+Possible values for categories:
+- installation
+- live visuals
+- video
+
+---------------------
+
+Act as a senior frontend developer who is an expert in typescript, css, tailwind css and framer-motion.
+### instructions ###
+- Create 3 different suggestions for a top navigation bar of a web app.
+- It should contain 3 items:
+  - Home
+  - Projects
+  - About
+- The items should be animated when they appear. Fot this, use framer-motion. Visit the url of the documentation of framer-motion library in the web to get exmaples and inspirations of animations here: https://www.framer.com/motion/animation/).
+- On mouseover event, the items should also be animated.
+- Use tailwind css for styling.
+- 
+### example ###
+The following is an example of what the html code should look like:
+```
+<ul class="flex">
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="#">Active</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-blue-500 hover:text-blue-800" href="#">Link</a>
+  </li>
+  <li class="mr-6">
+    <a class="text-gray-400 cursor-not-allowed" href="#">Disabled</a>
+  </li>
+</ul>
+```
+This is just an example of the main html code, do not use this code.
+
+### result ###
+Provide the html code for the top navigation bar.
+Suggest 3 different versions, each with a different animation when appearing.
+
+Think step by step.
+
+---------------------
+Act as a senior frontend designer who is an expert in css and tailwind css.
+
+Create a main layout for a web app with:
+
+a fixed top header with a placeholder logo
+
+a main area
+
+a bottom footer with a text ``Ìmpressum```
+
+It should use grids.
+
+
+------------------------
+Create a scroll triggered animation of the text:
+```
+<div className="text-gray-600">
+  <span className="font-semibold">KALKATTAK</span> your friendly video
+  guys
+</div>
+```
+The animation should be made with framer-motion (@https://www.framer.com/motion/).
+The animation should start when the user is scrolling down and the text appears on the screen. The animation should be: coming from the bottom. Add an easing effect at the end of the animation.
+
+Think step by step.

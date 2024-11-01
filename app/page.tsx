@@ -1,101 +1,190 @@
 import Image from 'next/image';
 
+const projects = [
+  {
+    id: 1,
+    title: 'Digital Echo Chamber',
+    description:
+      'Interactive sound installation responding to viewer movements through space.',
+    categories: ['installation', 'live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 2,
+    title: 'Pulse',
+    description:
+      'Real-time visualization of city data through dynamic light patterns.',
+    categories: ['installation'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 3,
+    title: 'Urban Rhythms',
+    description:
+      'Documentary exploring underground electronic music scenes in major cities.',
+    categories: ['video'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 4,
+    title: 'Neural Canvas',
+    description: 'AI-generated visuals responding to live music performance.',
+    categories: ['live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 5,
+    title: 'Memory Wall',
+    description:
+      'Interactive projection mapping installation using archived photographs.',
+    categories: ['installation', 'live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 6,
+    title: 'Digital Fauna',
+    description:
+      'Reactive light sculptures mimicking natural animal movements.',
+    categories: ['installation'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 7,
+    title: 'Sound Spaces',
+    description: 'Documentary about acoustic architecture and sound design.',
+    categories: ['video'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 8,
+    title: 'Binary Garden',
+    description:
+      'Living installation combining plant life with digital sensors.',
+    categories: ['installation'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 9,
+    title: 'Light Flow',
+    description: 'Real-time generative visuals for music festivals.',
+    categories: ['live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 10,
+    title: 'Urban Canvas',
+    description: 'Projection mapping series transforming city buildings.',
+    categories: ['installation', 'live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 11,
+    title: 'Digital Horizons',
+    description: 'Short film exploring virtual reality communities.',
+    categories: ['video'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 12,
+    title: 'Wave Forms',
+    description: 'Interactive sound sculpture responding to touch.',
+    categories: ['installation'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 13,
+    title: 'Pixel Forest',
+    description:
+      'Immersive LED installation creating virtual natural environments.',
+    categories: ['installation', 'live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 14,
+    title: 'Data Stream',
+    description: 'Live visualization of internet traffic patterns.',
+    categories: ['live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 15,
+    title: 'Digital Artifacts',
+    description: 'Documentary series about preserved digital culture.',
+    categories: ['video'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 16,
+    title: 'Neural Beats',
+    description: 'AI-powered visual performance system.',
+    categories: ['live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 17,
+    title: 'Echo Chamber',
+    description: 'Interactive sound installation using visitor movements.',
+    categories: ['installation'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 18,
+    title: 'Virtual Landscapes',
+    description:
+      'Generative art installation creating evolving digital environments.',
+    categories: ['installation', 'live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 19,
+    title: 'Code Poetry',
+    description: 'Short film about programming as artistic expression.',
+    categories: ['video'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+  {
+    id: 20,
+    title: 'Quantum Visuals',
+    description: 'Real-time graphics generated from quantum computer data.',
+    categories: ['live visuals'],
+    thumbnail: 'https://www.tailwindai.dev/placeholder.svg',
+  },
+] as const;
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <section className="mb-12">
+      <div className="flex flex-col gap-4 mb-8">
+        <h1 className="text-5xl font-semibold text-center uppercase">
+          Projects
+        </h1>
+        <p className="text-xl text-center">
+          This is an extract from some of the projects we have done or
+          participated in.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="bg-white rounded-xl space-y-2 border-t-2 border-l-2 border-r-8 border-b-8 border-stone-800 overflow-hidden transition-transform transform hover:scale-105 animate-fade-in"
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={project.thumbnail}
+              alt={project.title}
+              width={400}
+              height={300}
+              className="w-full aspect-[4/3]"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <div className="p-4">
+              <h3 className="text-2xl font-semibold uppercase mb-3">
+                {project.title}
+              </h3>
+              <p className="text-stone-700">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
