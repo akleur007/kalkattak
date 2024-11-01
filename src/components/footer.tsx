@@ -35,7 +35,7 @@ export function Footer() {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={textVariants}
-          className="text-stone-600 text-lg"
+          className="text-lime-800 text-lg"
         >
           <span className="font-semibold">KALKATTAK</span> your friendly video
           guys

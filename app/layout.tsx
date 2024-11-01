@@ -23,7 +23,7 @@ export default function RootLayout({
       >
         <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
           <Header />
-          <main className="container mx-auto pt-36 px-4 sm:px-6 lg:px-8">
+          <main className="container mx-auto pt-40 px-4 sm:px-6 lg:px-8">
             {children}
           </main>
           <Footer />
